@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="/user_list/" method="POST">
+        <p>Email:{{ obj.email }}<span>{{ errors.email }}</span></p>
+        <p>Username:{{ obj.username }}<span>{{ errors.username }}</span></p>
+        <p>Password:{{ obj.password }}<span>{{ errors.password }}</span></p>
+        <p>Mobile:{{ obj.mobile }}<span>{{ errors.mobile }}</span></p>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>
