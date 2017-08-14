@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+    <script src="/static/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <h1>User Typein</h1>
+    <form action="/index/" method="post">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" name="title"></td>
+            </tr>
+            <tr>
+                <td>Release date</td>
+                <td><input type="text" name="releaseDate"></td>
+            </tr>
+            <tr>
+                <td>Duration</td>
+                <td><input type="text" name="duration"></td>
+            </tr>
+            <tr>
+                <td>Genre</td>
+                <td><input type="text" name="genre"></td>
+            </tr>
+             <tr>
+                <td>Synopsis</td>
+                <td><input type="text" name="synopsis"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="submit"></td>
+            </tr>
+        </table>
+    </form>
+    <br>
+    <h1>User Display</h1>
+    <table border="1">
+        <thead>
+            <th>Title</th>
+            <th>Release date</th>
+            <th>Duration</th>
+            <th>Genre</th>
+            <th>Synopsis</th>
+        </thead>
+        <tbody>
+            {% for line in data %}
+                <tr>
+                    <td>{{ line.mTitle }}</td>
+                    <td>{{ line.mReleaseDate }}</td>
+                    <td>{{ line.mDuration }}</td>
+                    <td>{{ line.mGenre }}</td>
+                    <td>{{ line.mSynopsis }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>
